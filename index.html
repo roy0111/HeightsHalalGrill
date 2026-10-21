@@ -399,7 +399,8 @@
           <li class="nav-item"><a class="nav-link" href="#visit" data-i="nav_visit"></a></li>
         </ul>
         <div class="d-flex gap-2 align-items-center">
-          <button id="langBtn" class="btn btn-outline-secondary btn-sm">ES</button>
+          <a class="btn btn-outline-warning btn-sm" href="#games" id="playNav"><i class="bi bi-controller"></i> <span data-i="play"></span></a>
+<button id="langBtn" class="btn btn-outline-secondary btn-sm">ES</button>
           <button id="themeBtn" class="btn btn-outline-secondary btn-sm" aria-label="Toggle theme"><i
               class="bi bi-sun-fill"></i></button>
           <a class="btn btn-red btn-sm doordash" target="_blank" rel="noopener"
@@ -565,7 +566,8 @@
   <section id="games" style="background:var(--soft)">
  <div class="container">
   <h2 class="section-title text-center mb-2" data-i-html="g_title"></h2>
-  <p class="text-center opacity-75 mb-4" data-i="g_sub"></p>
+  <p class="text-center opacity-75 mb-2" data-i="g_sub"></p>
+  <p class="text-center fw-semibold text-red mb-4" id="joke" style="min-height:1.6em;transition:opacity .4s"></p>
   <ul class="nav nav-pills justify-content-center mb-4" id="gtabs"></ul>
   <div class="game-box mx-auto" id="gbox"></div>
  </div>
@@ -596,7 +598,8 @@
             id="tot">$0.00</strong></div>
         <a class="btn btn-outline-secondary w-100 mb-2" href="tel:7274542715"><i class="bi bi-telephone"></i> <span
             data-i="call_order"></span></a>
-        <button class="btn btn-link text-danger w-100" onclick="clearCart()" data-i="clear"></button>
+        <a class="btn btn-outline-warning w-100 mb-2" href="#games" data-bs-dismiss="offcanvas" id="playCart"><i class="bi bi-controller"></i> <span data-i="g_cartplay"></span></a>
+<button class="btn btn-link text-danger w-100" onclick="clearCart()" data-i="clear"></button>
         <small class="d-block text-center opacity-50" data-i="cart_note"></small>
       </div>
     </div>
@@ -627,7 +630,7 @@
         visit_title: "Visit <span>Us</span>", address: "Address", hours: "Business Hours", hours_full: "Monday – Sunday: 11:00 AM – 10:00 PM", phone: "Business Phone", directions: "Get Directions",
         rights: "All rights reserved. 100% Halal.", cart: "Cart", your_cart: "Your Cart", subtotal: "Subtotal", tax: "Est. tax (7.5%)", total: "Total", call_order: "Call to Order", clear: "Clear cart",
         cart_note: "Cart is an estimate. Complete your order on DoorDash or by phone.", empty: "Your cart is empty.", added: "Add",
-        c_all: "All", g_title:"Game <span>Zone</span>",g_sub:"Waiting for your order? Play a quick game!",g1:"Memory Match",g2:"Burger Catch",g3:"Whack-a-Wing",g4:"Tic-Tac-Toe",g5:"Fry Snake",g_score:"Score",g_restart:"Restart",g_win:"You win!",g_lose:"Computer wins",g_draw:"Draw",g_over:"Game over",g_press:"Press an arrow key or button to start",g_time:"Time up!",g_moves:"Moves",fire_t: "Fired <span>Up</span>", fire_s: "Real flame. Real flavor. Tap any item to light it up.", c_wings: "Wings", c_sand: "Sandwiches & Burgers", c_chick: "Fried Chicken", c_shrimp: "Fried Shrimp", c_loaded: "Loaded Fries & Chip Bag", c_bowls: "Rice Bowls", c_sides: "Sides", c_dess: "Desserts",
+        c_all: "All", g_title:"Play While <span>You Wait</span>",g_sub:"Kitchen's on fire (on purpose). Kill time with a game!",play:"Play",g_cartplay:"Bored? Play while you wait",g1:"Memory Match",g2:"Burger Catch",g3:"Whack-a-Wing",g4:"Tic-Tac-Toe",g5:"Fry Snake",g_score:"Score",g_restart:"Restart",g_win:"You win!",g_lose:"Computer wins",g_draw:"Draw",g_over:"Game over",g_press:"Press an arrow key or button to start",g_time:"Time up!",g_moves:"Moves",fire_t: "Fired <span>Up</span>", fire_s: "Real flame. Real flavor. Tap any item to light it up.", c_wings: "Wings", c_sand: "Sandwiches & Burgers", c_chick: "Fried Chicken", c_shrimp: "Fried Shrimp", c_loaded: "Loaded Fries & Chip Bag", c_bowls: "Rice Bowls", c_sides: "Sides", c_dess: "Desserts",
         n_wings: "All wings are served with fries. Flavors: Buffalo • Hot Honey • BBQ • Lemon Pepper • Hot Lemon Pepper • Honey Gold • Mango Habanero",
         n_sand: "Make it a combo (add fries) +$2.99", n_chick: "Fresh fried halal chicken, crispy and juicy.", n_shrimp: "All fried shrimp served with fries.",
         n_loaded: "Chip Bag: bring your favorite chips, choose meat, toppings & sauce. Chips sold separately. Extra meat +$3.99.", n_bowls: "Served over rice with fresh toppings and white sauce.", n_sides: "", n_dess: "",
@@ -654,7 +657,7 @@
         visit_title: "Visí<span>tanos</span>", address: "Dirección", hours: "Horario", hours_full: "Lunes – Domingo: 11:00 AM – 10:00 PM", phone: "Teléfono del Negocio", directions: "Cómo Llegar",
         rights: "Todos los derechos reservados. 100% Halal.", cart: "Carrito", your_cart: "Tu Carrito", subtotal: "Subtotal", tax: "Impuesto est. (7.5%)", total: "Total", call_order: "Llamar para Pedir", clear: "Vaciar carrito",
         cart_note: "El carrito es un estimado. Completa tu pedido en DoorDash o por teléfono.", empty: "Tu carrito está vacío.", added: "Agregar",
-        c_all: "Todo", g_title:"Zona de <span>Juegos</span>",g_sub:"¿Esperando tu pedido? ¡Juega un rato!",g1:"Memoria",g2:"Atrapa Hamburguesas",g3:"Golpea Alitas",g4:"Gato",g5:"Serpiente de Papas",g_score:"Puntos",g_restart:"Reiniciar",g_win:"¡Ganaste!",g_lose:"Gana la computadora",g_draw:"Empate",g_over:"Fin del juego",g_press:"Presiona una flecha o botón para empezar",g_time:"¡Se acabó el tiempo!",g_moves:"Movimientos",fire_t: "A Todo <span>Fuego</span>", fire_s: "Llama real. Sabor real. Toca cualquier plato para encenderlo.", c_wings: "Alitas", c_sand: "Sándwiches y Hamburguesas", c_chick: "Pollo Frito", c_shrimp: "Camarón Frito", c_loaded: "Papas Cargadas y Chip Bag", c_bowls: "Tazones de Arroz", c_sides: "Acompañantes", c_dess: "Postres",
+        c_all: "Todo", g_title:"Juega Mientras <span>Esperas</span>",g_sub:"¡La cocina está en llamas (a propósito)! Mata el tiempo con un juego.",play:"Jugar",g_cartplay:"¿Aburrido? Juega mientras esperas",g1:"Memoria",g2:"Atrapa Hamburguesas",g3:"Golpea Alitas",g4:"Gato",g5:"Serpiente de Papas",g_score:"Puntos",g_restart:"Reiniciar",g_win:"¡Ganaste!",g_lose:"Gana la computadora",g_draw:"Empate",g_over:"Fin del juego",g_press:"Presiona una flecha o botón para empezar",g_time:"¡Se acabó el tiempo!",g_moves:"Movimientos",fire_t: "A Todo <span>Fuego</span>", fire_s: "Llama real. Sabor real. Toca cualquier plato para encenderlo.", c_wings: "Alitas", c_sand: "Sándwiches y Hamburguesas", c_chick: "Pollo Frito", c_shrimp: "Camarón Frito", c_loaded: "Papas Cargadas y Chip Bag", c_bowls: "Tazones de Arroz", c_sides: "Acompañantes", c_dess: "Postres",
         n_wings: "Todas las alitas se sirven con papas. Sabores: Buffalo • Miel Picante • BBQ • Limón Pimienta • Limón Pimienta Picante • Miel Dorada • Mango Habanero",
         n_sand: "Hazlo combo (agrega papas) +$2.99", n_chick: "Pollo frito halal fresco, crujiente y jugoso.", n_shrimp: "Todo el camarón frito se sirve con papas.",
         n_loaded: "Chip Bag: trae tus papitas favoritas, elige carne, toppings y salsa. Papitas se venden aparte. Carne extra +$3.99.", n_bowls: "Servido sobre arroz con ingredientes frescos y salsa blanca.", n_sides: "", n_dess: "",
@@ -894,6 +897,15 @@
   tabs.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>start(b.dataset.g));
   G[k]();L();document.getElementById("grs").onclick=()=>start(k)}
  start("memory");
+})();
+</script>
+<script>
+(function(){
+ const J={en:["Our wings are hot. Your waiting time? Also hot. 🔥","Plot twist: the burger is winning this one. 🍔","Hunger level: 'hangry'. Play before you bite someone.","Fun fact: fries make every game 37% better. 🍟","Good things come to those who wait... and to those who order extra fries.","Your food is being flame-grilled by a very serious chef.","Warning: high scores may cause sudden cravings.","Loading deliciousness… please do not stare at the grill.","Beating the computer at Tic-Tac-Toe burns 0 calories. Sadly.","If you win, we won't give you free food. But we'll be proud. 😎"],
+ es:["Nuestras alitas están calientes. ¿Tu espera? También. 🔥","Giro de la trama: la hamburguesa va ganando. 🍔","Nivel de hambre: 'hambriento furioso'. Juega antes de morder a alguien.","Dato curioso: las papas mejoran cualquier juego un 37%. 🍟","Lo bueno llega a quien espera... y a quien pide papas extra.","Tu comida la asa un chef muy serio a la parrilla.","Aviso: puntuaciones altas pueden causar antojos repentinos.","Cargando delicia… por favor no mires fijamente la parrilla.","Ganarle a la computadora en Gato quema 0 calorías. Lástima.","Si ganas, no hay comida gratis. Pero estaremos orgullosos. 😎"]};
+ const el=document.getElementById("joke");let i=0;
+ function show(){const a=J[lang]||J.en;el.style.opacity=0;setTimeout(()=>{el.textContent=a[i++%a.length];el.style.opacity=1},300)}
+ show();setInterval(show,5000);
 })();
 </script>
 </body>
