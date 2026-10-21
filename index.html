@@ -309,7 +309,7 @@ function renderFeatured(){
  $("#featured").innerHTML=FEAT.map(([k,img,pos])=>`<div class="slide"><div class="feat">
  <div class="pic" style="background-image:url(${img});background-position:${pos}"></div>
  <div class="p-3"><h6 class="mb-1">${t(k)}</h6><div class="d-flex justify-content-between align-items-center"><span class="price">${money(PRICE[k])}</span>
- <button class="btn btn-red add" aria-label="${t('added')}" onclick="add('${k}')"><i class="bi bi-plus-lg"></i></button></div></div></div>`).join("");
+ <button class="btn btn-red add" aria-label="${t('added')}" onclick="add('${k}')"><i class="bi bi-plus-lg"></i></button></div></div></div></div>`).join("");
 }
 function itemsHTML(g){return `<div class="row g-3">`+g.items.map(([k,p])=>`<div class="col-md-6"><div class="item"><div><strong>${t(k)}</strong></div>
  <div class="d-flex align-items-center gap-3"><span class="price">${money(p)}</span><button class="btn btn-red add" aria-label="${t('added')}" onclick="add('${k}')"><i class="bi bi-plus-lg"></i></button></div></div></div>`).join("")+`</div>`}
